@@ -1,0 +1,216 @@
+**MySQL Index:**
+
+The most important index types we need to know about are:
+
+- Single column and multi-column index  - multicolumn indexes can have up to 16 columns, are composite(same name), and are considered a sorted array. Queries that require all of the columns or just select few will work on multicolumn indexes. Single column should be used when the data is the focus of the table. `CREATE TABLE`
+- Composite index - any index with more than one column and is used for searches and lookups.  `CREATE NONCLUSTERED INDEX`
+- Clustered index - are stored in ascending or descending order and they are created automatically whenever a primary key is created in a table. They are preferred for use in tables that need a lot of modification.  - `CREATE CLUSTERED INDEX`
+
+**Question 1**
+
+I am building some very high-quality chairs and need exactly four nails for each chair. I've written a program to calculate how many nails I need to buy to build these chairs.
+
+**chairs = '15'**
+
+**nails = 4**
+
+**total_nails = chairs * nails**
+
+**message = 'I need to buy {} nails'.format(total_nails)**
+
+**print(message)**
+
+When I run the program, it tells me that I need to buy 15151515 nails. This seems like a lot of nails.
+
+Is my program calculating the total number of nails correctly? What is the problem? How do I fix it? Write your explanation, along with the code to fix this, below.
+
+<aside>
+💡 It is printing 15 four times over rather than doing the sum for the nails. The chairs integer is in quotations so it should be -
+
+**chairs = 15**
+
+**nails = 4**
+
+**total_nails = chairs * nails**
+
+**message = 'I need to buy {} nails'.format(total_nails)**
+
+**print(message)**
+
+</aside>
+
+**Question 2**
+
+I'm trying to run this program, but I get an error. What is the error telling me is wrong? How do I fix the program?
+
+**my_name = Penelope**
+
+**my_age = 29**
+
+**message = 'My name is {} and I am {} years old'.format(my_name, my_age)**
+
+**print(message)**
+
+<aside>
+💡 Penelope is a string and needs to be in quotes marks so the code would be -
+
+my_name = 'Penelope'
+
+my_age = 29
+
+message = 'My name is {} and I am {} years old'.format(my_name, my_age)
+
+print(message)
+
+</aside>
+
+**Question 3**
+
+I have a lot of boxes of eggs in my fridge and I want to calculate how many omelettes I can make. Write a program to calculate this.
+
+Assume that a box of eggs contains six eggs and I need four eggs for each omelette, but I should be able to easily change these values if I want. The output should say something like:
+
+"
+
+*You can make 9 omelettes with 6 boxes of eggs*
+
+"
+
+**Question 4**
+
+Complete a series of tasks to format strings
+
+**# Task 1 - Replace the (.) character with (!) instead. Output should be “I love coding!”**
+
+**my_str = "I love coding."**
+
+<aside>
+💡 my_str.pop()
+
+my_str.append(!)
+
+</aside>
+
+**print(my_str)**
+
+**# Task 2 - Reassign str so that all of its characters are lowercase.**
+
+**my_str_1 = "EVERY Exercise Brings Me Closer to Completing my GOALS."**
+
+**print(my_str_1)**
+
+**# Task 3 - Output whether this string starts with an A or not**
+
+**my_str_2 = "We enjoy travelling"**
+
+<aside>
+💡 my_str_2 = startwith(’A)’
+
+</aside>
+
+**ans_1 =**
+
+**print(ans_1)**
+
+**# Task4 - What is the length of the given string?**
+
+**my_str_3="1.458.001"**
+
+**ans_2=**
+
+**print(ans_2)**
+
+**Question 5**
+
+Complete a series of tasks to slice strings
+
+**# Task 1 - Slice the word so that you get "thon".**
+
+**wrd="Python"**
+
+**ans_1=**
+
+**print(ans_1)**
+
+**# Task 2 - Slice the word until "o". (Pyth)**
+
+**wrd="Python"**
+
+**ans_1=slice(4 ,5)**
+
+**print(ans_1)**
+
+**# Task 3 - Now try to get "th" only.**
+
+**wrd="Python"**
+
+**ans_1=**
+
+**print(ans_1)**
+
+**# Task 4 - Now slice the word with steps of 2, excluding first and last characters**
+
+**wrd="Python"**
+
+**ans_1=**
+
+**print(ans_1)**
+
+**Question 6**
+
+Explain what this program does:
+
+**for number in range(100):**
+
+**output = 'o' * number**
+
+**print(output)**
+
+<aside>
+💡 Prints ‘o’ —as it is a letter inside string quotations— 99 times (inside the range of 100)
+
+</aside>
+
+**Question 7**
+
+Your boss really likes calculating VAT on their purchases. It is their favourite hobby. They've written this code to calculate VAT and need your help to fix it.
+
+**def calculate_vat(amount):**
+
+**amount * 1.2**
+
+**total = calculate_vat(100)**
+
+**print(total)**
+
+When your boss runs the program they get the following output:
+
+**None**
+
+Your boss expects the program to output the value 120 . What is wrong? How do you fix it?
+
+**Question 8**
+
+Write a new function to print a ‘cashier receipt’ output for a shop (any shop – clothes, food, events etc).
+
+It should accept 3 items, then sum them up and print out a detailed receipt with TOTAL.
+
+For example:
+
+**Input:**
+
+Item_1_name = ‘Trainers’
+
+Item_1_price = 50.45
+
+Item_2_name = ‘T-shirt
+
+Item_2_price = 12
+
+**Output:**
+
+Trainers	50.45
+
+T-shirt	12.00
+
+TOTAL       	62.45
