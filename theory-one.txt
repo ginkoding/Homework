@@ -1,0 +1,321 @@
+1. What is Python and what are its main features? - It is an object oriented programming language. It has fairly easy syntax which makes it a good beginner language and is considered easy to debug because of a built in debugging feature. 
+2. Discuss the difference between Python 2 and Python 3? - Python 2 is now classed as legacy and it is useful to understand the syntax for working on older projects but 3 is still being maintained and should be implemented in new projects. 
+3. What is PEP 8? - It is a style guide for python to improve consistency across code. It was written in 2001 and is widely used across the python community. 
+4. In computing / computer science what is a program? - A sequence of instructions that a computer can read and follow. This allows inputting, manipulating and outputting data.
+5. In computing / computer science what is a process? - a process is the action of a computer using a program.
+6. In computing / computer science what is cache? - The temporary memory of a computer that allows faster access than central storage. 
+7. In computing / computer science what is a thread and what do we mean by multithreading? - thread is a CPU action of running a process, multithreading is more than one thread running at the same time and sharing the resources together. Most apps use multithreading ex. multiple tabs open on a browser each with different areas of content. 
+8. In computing / computer science what is concurrency and parallelism and what are the differences? - concurrency is when two task can’t overlap but run in order on after the other, parallelism is tasks running at the same time and independent of each other. Parallelism is consider slightly easier to debug. 
+9. What is GIL in Python and how does it work? - Global Interpreter Lock. It allows only one thread to be executed at a time and prevents bugs and crashes in python code. It was created during single thread days and is unable to be removed because of backwards compatibility. 
+10. What do these software development principles mean: DRY, KISS, BDUF? - Don’t Repeat Yourself,  Keep It Simple Stupid, Big Design Up Front.
+11. What is a Garbage Collector in Python and how does it work? - It is an automatic memory mangement so programmers don’t have to worry about it themselves. It is possible to adjust the threshhold on garbage collection to prevent moving up a generation, disable or manually trigger one. It is more complex than reference counting. 
+12. How is memory managed in Python? - Python is automatic in memory management, as everything is considered an object and unused ones are unclaimed.  
+13. What is a Python module? - They are the files that end in .py extension that are then used inside a python program with code that can be read as python language. 
+14. What is docstring in Python? - the are the strings that are used inside functions etc. and are surrounded by triple quote marks (”””) but this can also be used as multi-line comments so it must be assigned to a variable to be read. 
+15. What is pickling and unpickling in Python? - Example usage. - It is the act of saving data for a long time by converting it into a long stream of data and then unpickling is the act of reversing that process. Sort of similar to JSON and stringyfy etc. You use the term `data. pickle` to use it in code. 
+16. What are the tools that help to find bugs or perform static analysis? - Such as CLion it looks at code without running it and checks for bugs and style issues. The easiest to access debugging tool is the button next to the run tool.
+17. How are arguments passed in Python by value or by reference? Give an example. - by value is the most common, the identifier can be created if its not already been used or re-assigned if it has.  
+18. What are Dictionary and List comprehensions in Python? Provide examples. - Dictionary is collection of elements in key-value pairs, can be any type of data, data accessed using keys and uses the `dict()` function. List is accessed using index value, placed in [] and created using the `list()` function. 
+19. What is namespace in Python? - a namespace is created when a function etc. is executed. They can be local or global and include file paths as well as function/package/class names. 
+20. What is pass in Python? - if a section of code should not be left empty for it to run, pass can be used instead to make sure it runs/does’nt receive an error until code can be inserted instead. For example, empty code in loops. 
+21. What is unit test in Python? - testing code for errors in small sections, rather than all at once. To determine it all works correctly, 
+22. In Python what is slicing? - cut characters using slice, accessing only parts of data by specifying which bit are needed through a 0 based character counting built-in function. 
+23. What is a negative index in Python? - a way of counting arrays starting from the last element, which is counted as -1. 
+24. How can the ternary operators be used in python? Give an example. -Turnery operators are used to determine what to do between two options, do something if a condition is met otherwise do a different thing, for example-   `x if condition else y`
+25. What does this mean: *args, **kwargs? And why would we use it? - they allow multiple arguments to be passed into a function. Kwargs allow keywords to be used and returns as a dictionary. 
+26. How are range and xrange different from one another? - they are both functions built into Python that return a list of intergers. xrange is faster, but unable to be used in python 3. 
+27. What is Flask and what can we use it for? - it is a framework that allows a web app to be built in only a single .py file. Allowing it to be considered lightweight and good for beginners. 
+28. What are clustered and non-clustered index in a relational database? - clustered use key values to sort and store data, if there is no clustered index data rows are unordered and referred to as heap. 
+29. What is a ‘deadlock’ a relational database? - when at least two sections of a database are awaiting on another to release their lock so they can update. 
+30. What is a ‘livelock’ a relational database? - when at least two processes are repeating the same interaction without any result. Not waiting for anything but constantly running and achieving nothing.
+
+
+
+
+Python string methods:
+describe each method and provide an example
+Method Description Example
+capitalise() turns the first character into upper
+case
+hi = “hello world!” x = hi.capitalize()
+print (x)
+casefold() turns a string into lower case hi = “hello world!” x = hi.casefold()
+print (x)
+center() returns centered string hi = “hello world!” x = hi.center(50)
+print (x)
+count() returns how many time a specific
+value happens within a string
+hi = “hello world!” x =
+hi.count("world") print (x)
+endswith() returns a true if ends with a value
+that matches request
+hi = “hello world!” x =
+hi.endswith("!") print (x)
+find() searches in a string for a particular
+value and its position
+hi = “hello world!” x =
+hi.find("hello") print (x)
+format() formats specific values in a string hi = “It’s only {price:.2f} pounds!”
+print(hi.format(price = 30))
+index() returns the index position of a
+string value requested
+hi = “hello beautiful world!” x =
+hi.index("hello") print (x)
+isalnum() checks if characters are
+alphanumeric
+hi = “hello world1!11!!” x =
+hi.isalnum() print (x)
+isalpha() checks if characters are from the
+alphabet
+hi = “hello world” x = hi.isalpha()
+print (x)
+isdigit() checks if all string characters are
+digits
+number = “3000” x = number.isdigit()
+print (x)
+islower() checks if characters are all lower
+case
+hi = “hello world!” x = hi.islower()
+print (x)
+isnumeric() checks if all are numeric number = “3000” x = number.isnumeric()
+print (x)
+isspace() checks if all parts of the string are
+just blank spaces
+number = “ ” x = number.isspace() print
+(x)
+istitle() checks if string follows the rules of
+the title
+hi = “hello world!” x = hi.istitle()
+print (x)
+isupper() checks if characters are all upper
+case
+hi = “HELLO WORLD” x = hi.isupper()
+print (x)
+join() makes iterables a string hi = (“hello", "world!”) x =
+"#".join(hi) print (x)
+lower() makes a string all lower case hi = “hello WORLD!” x = hi.lower()
+print (x)
+lstrip() returns the left of the string hi = “ hello world!” x =
+hi.lstrip("hello") print (x)
+Theory Assessment One 5
+Method Description Example
+rstrip() returns the right of the string hi = “hello world! ” x =
+hi.rstrip("hello") print (x)
+split() splits a string at a specified space
+and returns it as a list
+hi = “hello beautiful world!” x =
+hi.split() print (x)
+splitlines() splits a string at a lines breaks and
+returns it as a list
+hi = “hello\beautiful\world!” x =
+hi.splitlines() print (x)
+startwith() returns a true if starts with a value
+that matches request
+hi = “hello beautiful world!” x =
+hi.startswith("hello") print (x)
+strip() trims a string hi = “ hello beautiful world! ” x =
+hi.strip() print (x)
+swapcase() swamps lower and upper cases
+around
+hi = “HELLO beautiful WORLD” x =
+hi.swapcase() print (x)
+title() makes each character of a word
+within the string upper case
+hi = “hello beautiful world!” x =
+hi.title() print (x)
+upper() makes all of a string upper case hi = “hello beautiful world!” x =
+hi.upper() print (x)
+Python list methods:
+describe each method and provide an example
+Method Description Example
+append() adds element at the end of a list cars = [”Toyota”, “Vauxhall”, “Renault”]
+cars.append(”BMW”)
+clear() removes everything from a list cars = [”Toyota”, “Vauxhall”, “Renault”]
+cars.clear()
+copy() copies a list and returns it cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.copy()
+count() returns how many times specified
+item appears
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.count(”Toyota”)
+extend() Adds another element(s) to the
+end of current list
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+animals = ["pig", "rabbit", "lion"]
+cars.extend(animals)
+index() returns the index of an element cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.index(”Toyota”)
+insert() puts an element inside a list at a
+given placement
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+cars.insert(1, ”BMW”)
+pop() removes an element at a position
+that is given
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.pop(2)
+Theory Assessment One 6
+Method Description Example
+remove() removes the first item in a list with
+a specified value
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.remove(”Toyota”)
+reverse() swaps the order of a list around/in
+reverse
+cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.reverse()
+sort() sorts a list cars = [”Toyota”, “Vauxhall”, “Renault”]
+x = cars.sort()
+Python tuple methods:
+describe each method and provide an example
+Method Description Example
+count() returns how many times specified
+item is in a tuple
+atuple - (1, 2, 3, 4, 5, 4, 3, 2, 1) x =
+atuple.count(4) print(x)
+index() returns the index position of
+where a value is inside a tuple
+atuple - (1, 2, 3, 4, 5, 4, 3, 2, 1) x =
+atuple.index(5) print(x)
+Python dictionary methods:
+describe each method and provide an example
+Method Description Example
+clear() removes everything from the
+dictionary
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” }
+animal.clear() print(animal)
+copy() copies it, and returns it
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.copy() print(x)
+fromkeys() returns the specified keys and
+value within the dictionary
+get() returns what has been
+specified
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.get("paws") print(x)
+items() gets a list with a tuple for the
+key value pairs
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.items() print(x)
+keys() returns the dictionaries keys as
+a list
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.keys() print(x)
+pop() removes specified item
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” }
+animal.pop("paws") print(animal)
+Theory Assessment One 7
+Method Description Example
+popitem() removes the last to be added
+key value pair
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” }
+animal.popitem() print(animal)
+setdefault()
+returns what has been
+specified and if it is not created
+to return, it creates it
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.setdefault("paws", "bald") print(x)
+update() updates using specified key
+value pairs
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” }
+animal.update({"colour": "brown"})
+print(animal)
+values() returns all the values of the
+dictionary as a list
+animal = { “type”: “rabbit”, “paws”:
+“fluffy”, “tail”: “fluffier” } x =
+animal.values() print(x)
+Python set methods:
+describe each method and provide an example
+Method Description Example
+add() adds an element cars = {”Toyota”, “Vauxhall”, “Renault”}
+cars.add("BMW") print(cars)
+clear() removes everything from
+the set
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+cars.clear() print(cars)
+copy() makes a copy of everything
+in the set and returns it
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+x = cars.copy() print(x)
+difference() shows the difference
+between two (or more) sets
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+carsone = {”Rover”, “Landrover”,
+“Renault”} x = cars.difference(carsone)
+print(x)
+intersection( returns the intersection of
+two (or more) sets
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+carsone = {”Rover”, “Landrover”,
+“Renault”} x = cars.intersection(carsone)
+print(x)
+issuperset() shows whether another set
+is inside this current set
+cars = {”Toyota”, “Vauxhall”, “Renault”,
+”Rover”, “Landrover”,} carsone = {”Rover”,
+“Landrover”, “Renault”} x =
+cars.issuperset(carsone) print(x)
+issubset() shows whether the current
+set is inside another set
+cars = {“Renault”, ”Rover”, “Landrover”,}
+carsone = {”Toyota”, “Vauxhall”, ”Rover”,
+“Landrover”, “Renault”} x =
+cars.issubset(carsone) print(x)
+pop() removes from a set cars = {”Toyota”, “Vauxhall”, “Renault”}
+cars.pop() print(cars)
+remove() removes one specified part
+of a set
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+cars.remove("Renault") print(cars)
+Theory Assessment One 8
+Method Description Example
+symetric_difference() shows the symmetric
+difference between two sets
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+carsone = {”Rover”, “Landrover”,
+“Renault”} x =
+cars.symmetric_difference(carsone)
+print(x)
+union() shows the union of sets
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+carsone = {”Rover”, “Landrover”,
+“Renault”} x = cars.union(carsone)
+print(x)
+update() can update a set with a set
+cars = {”Toyota”, “Vauxhall”, “Renault”}
+carsone = {”Rover”, “Landrover”,
+“Renault”} cars.update(carsone)
+print(cars)
+Python file methods:
+describe each method and provide an example
+Method Description Example
+read() returns the content of the file x = open (”textfile.txt", “r”)
+print(x.read())
+readline() returns a single line from the file x = open (”textfile.txt", “r”)
+print(x.readline())
+readlines() returns multiple lines from the file
+as a list
+x = open (”textfile.txt", “r”)
+print(x.readlines())
+write() writes a string which is added to
+the file
+x = open (”textfile.txt, “a”)
+x.write("hello world!") x.close() x =
+open (”textfile.txt, “r”)
+print(x.read())
+writelines() writes a whole list of strings which
+are added to the file
+x = open (”textfile.txt, “a”)
+x.writelines(["hello world!", "how are
+you?"]) x.close() x = open
+(”textfile.txt, “r”) print(x.read())
