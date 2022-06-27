@@ -1,0 +1,40 @@
+ HOMEWORK WEEK 4
+(handout for students)
+
+
+TASK 1 (Git and GitHub)
+
+Question 1
+Complete definitions for key Git & GitHub terminology
+GIT WORKFLOW FUNDAMENTALS
+·        Working Directory is the checkout location of a folder, usually the .git  folder. You cannot git add 
+from outside the root directory and git status compares current and one in the cloud. In general it is the area before staging 
+a commit. 
+·        Staging Area is when you prepare your work for a commit. You can still make changes int he staging area and 
+it has not been commited yet but needs doing before a commit. 
+·        Local Repo (head) is the project being worked on, on your local computer. Changes are not commited on 
+github (yet) and many people can work on their own local repo's for the same project at the same time. Then merge them 
+all together with a commit.
+·        Remote repo (master) is the main repository that everyoe working on a project commits too. It collects 
+and merges all the various files and allows for version control. If something goes wrong, it is possible to pull back to a different version 
+or amend a branch before adding it to the master branch to remove conflicts. 
+ 
+WORKING DIRECTORY STATES:
+·        Staged is marked for commiting, not yet commited. 
+·        Modified is edited from the main .git repository in the cloud and on a local machine.
+·        Committed a modified file that has been merged into git for other to pull down and amend on their own local repos. 
+ 
+GIT COMMANDS:
+·        Git add - moves a modified file into the staging area using the terminal
+·        Git commit - commit changes but not yet in the remote repo. Often paied with -m "relevant message"
+·        Git push - usually used with origin to specify a branch to push to on the remote repo
+·        Git fetch - like git pull but doesnt create a copy, so it doesnt affect any local files. 
+·        Git merge - merge two branches, usually one section merged into the main once complete
+·        Git pull - pull remote repo to local working directory, make it up to date
+
+
+
+
+
+
+
