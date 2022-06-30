@@ -1,0 +1,134 @@
+1. What is the program?
+Python is considered an easy language to learn
+and has many varied and thorough applications for websites, data, automination, 
+and even non-programers use it in other areas (ex. finance). 
+
+2. What is the process?
+It uses .py and the CPU moves the program
+
+3. What is Cache?
+A tempoary store of data.
+
+4. What is Thread and Multithreading?
+Executing a single thing on the OS or multiple, Python is multi-threading
+its processes.
+
+5. What is GIL in Python and how does it work?
+Global Interpretor Lock
+
+6. What is Concurrency and Parallelism and what are the differences?
+Concurrency means a task won't be int he way of another task by launching network requests 
+at once. Parallelism makes use of 
+
+7. What do these stand for in programming: DRY, KISS, BDUF 
+Don't Repeat Yourself
+Keep it Simple, Stupid
+Big Design Up Front
+
+8. What is Garbage collector? How does it work?
+It collects unused processes in Python to make sure that it performs as fast as possible
+
+9. What are ‘deadlock’ and ‘livelock’ in a relational database?
+Deadlock is when python stopped responding, livelock is when they are responding 
+too much and can't get around their current task. 
+
+10. What is Flask and what can we use it for?
+Is used with Python, a code library but it is lightweight unlike Django
+which is similar. 
+
+
+
+2. Discuss the difference between Python 2 and Python 3    
+Python 2 is no longer used as of 2020, but it is worth knowing the differences between them
+as Python 2 is still in legacy projects and may have to be dealt with. 
+Python 3 recieves all the current updates and all libraries are now only created to be compatible with
+Python 3.Python 3 has syntax which is considered easier to work with.
+
+
+
+3. Write a function that can define whether a word is a Palindrome
+Write tests for the newly created Palindrome function. Provide a 
+brief explanation for your test case options. 
+
+
+def palindrome(inputString):
+    reverseString = rev:inputString
+        if (inputString == reverseString):
+        return True
+i = input("Input string data here: ")
+result = palndrome(i)
+    if result == 1:
+        print("Is palindrome")
+    else:
+        print("Not palindrome")
+
+
+4. Write tests for the newly created Palindrome function. Provide a 
+brief explanation for your test case options.
+racecar, pop
+cherub, noise, dog
+To test if it works using palindromes and non-palindromes. 
+
+
+
+5. Agile methodology, Scrum: name at least 3 types of meetings that 
+are exercised by Agile teams and describe the objective of each 
+meeting.
+Sprint Review Meeting - this is a live demonstration of a product where the 
+product owner, scrum leader etc discuss what improvementss could be made.
+Daily Scrum Meeting - this happens everyday for the team to discuss any issues
+they may expect or are having, the meaning behind it is to encourage everyone to be 
+on track.
+Sprint Planning - the vision of what is to be done is explained by the Product 
+Owner and it is divied up into tasks for members. This is not a short meeting like the Daily
+ones but to draw up a full plan. 
+
+
+6. Exception handling in Python, explain what each of the following 
+blocks means in the program flow:
+Try, except, else, finally -
+Try - test for errors
+Except - copes with it
+Else - works with no problems
+Finally - execute 
+
+
+
+7. How can we connect a Python program (process) with a database?
+Explain how it works and how do we fetch / insert data into DB 
+tables from a python program. 
+You use PIP, you need your password from MySQL, you use the command line, 
+and there is an import to test the connction. 
+
+
+
+9. TWO NUMBER SUM: 
+●Write a function that takes in a non-empty array of distinct integers
+and an integer representing a target sum. If any two numbers in the
+input   array   sum   up   to   the   target   sum,   the   function   should   return
+them in an array, in any order. If no to numbers sum up to the target
+sum, the function should return an empty array.
+●Note   that   the   target   sum   has   to   be   obtained   by   summing   two
+different   integers   in   the   array.   You   cannot   add   a   single   integer   to
+itself in order to obtain the target sum.
+●You   can   assume   that   there   will   be   at   most   one   pair   of   numbers
+summing up to the target sum. 
+Sample Input: numbers = [3, 5, -4 ,8, 11, 1, -1, 6]  target_sum = 10
+Sample Output: [-1, 11] the numbers can be in any  order, it does not matter.
+
+
+nums = [3, 5, -4, 8, 11, 1, -1, 6]
+t_sum = 10
+def num_sum (nums, t_sum):
+    for i in range(0,
+    len(nums)):
+        total = nums[i] + nms[x]
+
+        if (total == t_sum):
+            return (nums[i], nums[x])
+            retun -1
+
+    result = num_sum (nums, t_sum)
+
+print(result) 
+
