@@ -1,0 +1,173 @@
+**USE PARTS DB TO WRITE THE FOLLOWING QUERIES**
+
+1. Find the name of each part where the weight is more than 14.
+
+SELECT p.weight
+FROM parts p
+WHERE p.weight >14;
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/acb7be21-8289-4331-85ff-bef6e02e9f09/Untitled.png)
+
+1. Find all **unique** supplier(s) where their status is equal to 20.
+
+SELECT DISTINCT s.sname
+FROM supplier s
+WHERE s.status =20;
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/564d5610-7c76-4fd6-9f03-8ad7c55af925/Untitled.png)
+
+**My SHOP SALES DB had a warning an from during the week which I didn’t know how to correct, so I have answered with the syntax but none of them worked on MySQL because of this.**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f90bfaf-9082-454f-9749-468b9a2c31f3/Untitled.png)
+
+1. Find out how many sales (amount) were recorded each week, per day (where available)
+    - **This would look like:**Week 1, Tuesday, £xWeek 1, Wednesday, £xWeek 2, Monday, £xWeek 2, Friday, £x
+    
+    SELECT s.week s.day s.salesamount
+    SUM (s.SalesAmount)
+    
+    FROM SALES1 S
+    GROUP BY s.week;
+    
+2. Change the name of salesperson Inga to be Annette instead, but only where Ignas Sales are <50.
+
+ALTER TABLE sales1 s
+ADD CONSTRAINT
+s.salesperson = Inga
+FOREIGN KEY
+s.salesperson = Annette
+WHERE
+s.salesamount <50
+REFERENCES
+s.salesperson (s.salesamount);
+
+1. Find out how many sales the London office logged
+    - Note we’re looking for quantity here - e.g. if London did 6 sales, then output would be 6)
+    
+    SELECT
+    COUNT (s.salesamount)
+    FROM sales1 s
+    WHERE store = 'London';
+    
+2. Find the total (sum) sales amount by each person by day
+
+SELECT
+SUM (s.salesamount)
+FROM sales1 s
+GROUP BY s.salesperson;
+
+1. How much (sum) each person sold for between week 1 and week 3
+
+SELECT
+SUM (s.SalesAmount)
+FROM sales1 s
+WHERE s.week <4
+
+GROUP BY s.salesperson;
+
+1. For each store:
+    - The total of their sales;
+    
+    SELECT
+    SUM (s.salesamount)
+    FROM sales1 s;
+    
+    - The number of sales;
+    
+    SELECT
+    COUNT (s.salesamount)
+    FROM sales1 s;
+    
+    - Their average sales;
+    
+    SELECT
+    AVG (s.salesamount)
+    FROM sales1 s;
+    
+    - Their lowest sales amount;
+    
+    SELECT
+    MIN (s.salesamount)
+    FROM sales1 s;
+    
+    - Their highest sales amount.
+    
+    SELECT
+    MIN (s.salesamount)
+    FROM sales1 s;
+    
+2. Find the average (AVG) monetary sales amount achieved by each
+
+SELECT s.store s.salesamount
+AVG (s.salesamount)
+FROM sales1 s
+GROUP BY s.store
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d503a85-5c1f-4651-aa92-7e9680593ef3/Untitled.png)
+
+1. Count the number of sales by each person if they had less than 3 sales for the past period
+
+SELECT
+COUNT s.salesamount
+FROM sales1 s
+GROUP BY s.salesperson
+WHERE COUNT = <3;
+
+1. Find the number (count) of sales by each person, but only if they made less than or equal to £300 worth of sales for the past period
+
+SELECT
+COUNT s.salesamount
+FROM sales1 s
+GROUP BY s.salesperson
+WHERE COUNT <= 300
+AND s.month = (period??)
+
+**USE PARTS DB TO WRITE THE FOLLOWING QUERIES**
+
+1. Return the PartID, Colour and Supplier name, where the supplier’s surname ends in an S, and the Supplier city is not London. Ensure the values are Unique.
+
+~~SELECT DISTINCT p.p_id p.colour s.sname
+FROM suppliers s
+INNER JOIN part p
+on s.sname
+WHERE s.sname
+LIKE %S
+AND s.city != london~~
+
+SELECT DISTINCT p.p_id p.colour s.sname
+FROM suppliers s
+INNER JOIN
+part p
+ON p.city =
+s.sname_city
+WHERE s.sname
+LIKE %S
+AND s.city != london;
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/948d5b6b-450c-43d2-9e8c-a0ec22cd2f45/Untitled.png)
+
+1. Return the supplier name, part name and project name for each case where the following conditions are true:
+
+i. The supplier supplies a project with a part;
+
+SELECT the SNAME PNAME JNAME from (JOIN the tables for supplier and project) WHERE SNAME and J_ID are have the same value…?
+
+Ii. And where the supplier’s city, project city and part city are the same.
+
+SELECT p.pname j.jname s.sname
+FROM parts p
+
+LEFT JOIN project j
+
+ON
+
+LEFT JOIN supplier s
+
+ON
+WHERE
+
+? project = part ?
+
+AND [p.city](http://p.city) = j.city;
+
+SELECT the SNAME PNAME JNAME from (JOIN all the tables… LEFT JOIN supplier ON…LEFT JOIN project ON) WHERE supplier supplies project with a part (?) AND P.CITY = S.CITY

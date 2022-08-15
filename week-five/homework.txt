@@ -1,0 +1,70 @@
+
+ Question 1
+Complete definitions for Scrum related key terminology provided below.
+SCRUM CEREMONIES
+·        Product backlog refinement - a list of all in the project, ordered by priority. 
+·        Sprint planning - a meeting at the start of each sprint to identify a goal and how to divide it, support it etc. 
+·        Daily scrum - ordering of priorities once a day. Identifying problems. 15 minutes. 
+·        Sprint review - a demonstration once a day to the product owner and what was completed in the sprint. 
+·        Sprint retrospective - discussing what well, and changes to make. 
+ 
+ SCRUM ROLES
+·        ScrumMaster - the leader, who coaches all and leads everything and keeps it going.
+·        Product Owner - a descision maker who maximises whats is done by the scrum team and is a connection to customer/business etc and the development team. 
+·        Development Team - the developers (designers, programmers, writers etc.) who plan and help each other within the team to maximise each sprint. 
+ 
+Question 2
+ 
+You are leading a development team that was given a task to create a new yoga 
+booking system.
+High level description of the system is as follows:
+ 
+·        It has a very simple interface to accept user input (bookings) and display 
+classes information
+·        All bookings, appointments, schedules etc should be stored in a SQL 
+database.
+·        There is a ‘backend’ system that should be written in Python to handle the 
+logic and manage the data flow. 
+Your team has two weeks to build a simple prototype that will be shown to the 
+client to seek their feedback and discuss further enhancements.
+ 
+TASK
+·        Break this task into smaller stories (chunks of work) for the team to work 
+on.
+·        Assume that one person works on one task.
+·        Mark tasks that can be worked on in parallel and perhaps those that need 
+to be worked on in particular order.
+
+tasks
+
+input
+simple UI - form, flask
+SQL database - store and backup
+python
+backups
+
+
+
+
+
+ 
+TASK 2 (SQL)
+Question 1
+Design a cinema booking system.
+Think how you would approach the problem and what are potential ways of solving 
+it?
+You do not need to write actual code, but describe the high-level approach:
+·        Draw a list of key requirements
+·        What are your main considerations?
+·        What would be your common or biggest problems?
+·        What components or tools would you potentially use?
+·        You are welcome to draw a diagram (a very simple one) for the process flow 
+to explain how  it is going to work. 
+
+Requirements - List of available movies, seating, UI with colours for available seats, 
+data input for customer details, ability to cancel booking, display records of bookings, mandatory fields - seats/customer details. 
+
+Considerations - making a user account to keep details and make sure name/contant is required
+
+Biggest problems - if details aren't required, places booked with no confirmation (email for confirmation etc), cancellations
+current movie list/screening locations so nothing is booked that isnt available.
